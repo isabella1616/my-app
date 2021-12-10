@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   # CREATE
   post("/insert_comment", { :controller => "comments", :action => "create" })
 
-  get("/insert_post", { :controller => "post", :action => "create" })
+  post("/insert_post", { :controller => "post", :action => "create" })
 
   get("/posts", { :controller => "post", :action => "index" })
 

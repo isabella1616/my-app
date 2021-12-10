@@ -8,24 +8,28 @@
 <li>
    <a href="/users">Find friends</a>
    </li>
+   <li>
+   <a href="/posts">Browse posts</a>
+   </li>
+   <li>
+   <a href="/comments">Browse comments</a>
+   </li>
    </ul>
 <h1>All users</h1>
 
 <table border="1">
   <tr>
-    <th>
-      ID
-    </th>
 
     <th>
-      Username
+      Name
     </th>
 
-    <th></th>
+    <th>Their page</th>
   </tr>
 
 <% @users.each do |user| %>
 <tr>
+
 <td>
 <%= user.first_name %>
 </td>
@@ -34,7 +38,9 @@
 <a href="/users/<%= user.first_name %>">Show details </a>
 </td>
 
-</table>
+
 <% end %>
+</table>
+
 
 

@@ -1,7 +1,7 @@
 class PostController < ApplicationController
   def index
-    matching_posts = Post.all
-
+    the_post = params.fetch("new_post")
+    matching_posts = Posts.all
     @list_of_posts = matching_posts.order({ :created_at => :desc })
 
     render({ :template => "posts/index.html.erb" })
@@ -18,9 +18,11 @@ class PostController < ApplicationController
   end
 
   def create
-    the_post = Post.new
-    the_post.author_id = params.fetch("query_author")
-    the_post.post = params.fetch("query_post")
+    user_id = session.fetch(:first_name)
+    #post = params.fetch("new_post")
+    post = Post.new
+    post.author_id = author_id
+    post.content = post
   
     if the_post.valid?
       the_post.save
