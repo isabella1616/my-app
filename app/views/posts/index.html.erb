@@ -1,0 +1,31 @@
+<h1>Welcome to the neighborhood</h1>
+
+<table border="1">
+<tr>
+<th>
+User Nickname 
+</th>
+
+<th>
+What they have to say
+</th>
+
+<th>
+Posted on
+</th>
+
+<th></th>
+</tr>
+
+<% @the_user.each do |user| %>
+<tr>
+<td>
+<%= user.username %>
+</td>
+
+<td>
+<a href="/users/<%= user.username %>">Show details </a>
+</td>
+
+</table>
+<% end %>

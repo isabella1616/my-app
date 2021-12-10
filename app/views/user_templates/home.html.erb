@@ -1,0 +1,32 @@
+
+ <ul>
+  <li>
+   <a href="/user_sign_in">Sign in</a>
+</li>
+<li>
+   <a href="/user_sign_up">Sign up</a>
+</li>
+<li>
+   <a href="/users">Find friends</a>
+   </li>
+   </ul>
+<h1>Welcome!</h1>
+
+<form action="/insert_post" method="post">
+      <div>
+        <label for="query_author">
+          Your name
+        </label>
+
+        <textarea type="text" id="author_id" name="query_author" placeholder="What should your friends call you?" rows="3"></textarea>
+      <button> Post </button>
+
+        <label for="post_box">
+         New Post
+        </label>
+
+        <textarea id="post_box" name="query_post" placeholder="What do you want to share..." rows="3"></textarea>
+      <button>
+        Share!
+      </button>
+    </form>
